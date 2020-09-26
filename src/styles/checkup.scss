@@ -16,6 +16,13 @@ body {
   color: #464646;
 }
 
+
+.MuiAlert-message, .MuiAlert-icon, .MuiSnackbar-root {
+  background-color: #5C9A93;
+  color: white;
+  border-radius: 4px;
+}
+
 /* condition for screen size minimum of 500px */
 @media (max-width:1500px) {
   /* your conditional / responsive CSS inside this condition */
@@ -86,6 +93,7 @@ body {
 
 .image {
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .response-container {

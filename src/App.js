@@ -18,7 +18,7 @@ function App() {
       <Route path="/home" component={HomePage} />
       <Route path="/login" component={Login} />
 
-      <Route component={Dashboard} />
+      <Route component={Login} />
     </Switch>
   </BrowserRouter>
  

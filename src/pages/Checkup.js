@@ -3,25 +3,48 @@ import Button from '@material-ui/core/Button';
 import '../styles/checkup.scss';
 import { useHistory } from "react-router-dom";
 
+import Snackbar from '@material-ui/core/Snackbar';
+import MuiAlert from '@material-ui/lab/Alert';
+import { makeStyles } from '@material-ui/core/styles';
+
+
 // images
 import bed from '../images/bed.png';
 
-function Checkup() {
+// for snackbar alert
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
 
+// exported function
+function Checkup() {
   // additional
   let history = useHistory();
   const uploadedImage = React.useRef(null);
   const imageUploader = React.useRef(null);
 
-  async function onSubmit() {
-    alert("Check up completed. Report will be sent to friends and family.")
-    history.push("/")
-  }
+  // for snackbar alert
+  const [open, setOpen] = React.useState(false);
+  const handleClick = () => {
+    setOpen(true);
+  };
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setOpen(false);
+    history.push("/dashboard")
+  };
 
+  // To handle submit
+  async function onSubmit() {
+    handleClick()
+  }
   function handleSubmit(event) {
     event.preventDefault();
   }
 
+  // To handle image upload
   const handleImageUpload = e => {
     const [file] = e.target.files;
     if (file) {
@@ -35,6 +58,7 @@ function Checkup() {
     }
   };
 
+  // To render
   return (
     <div className="page-container">
       <h1>Nana Borami's Checkup</h1>
@@ -374,6 +398,12 @@ function Checkup() {
           Submit
         </button>
       </form>
+      {/* Snack Bar Popup*/}
+      <Snackbar open={open} autoHideDuration={5000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="success" color="inherit">
+          Check up completed. Report will be sent to friends and family!
+        </Alert>
+      </Snackbar>
     </div>
   );
 }
