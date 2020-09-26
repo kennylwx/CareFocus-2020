@@ -23,7 +23,7 @@ function Login() {
           <label for="psw"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="psw" required/> 
           <button className="forget">Did you forget your password?</button>
-          <NavLink to="/" className="login">Log in</NavLink>
+          <NavLink to="/dashboard" className="login">Log in</NavLink>
         </div>
     </div>    
   );
