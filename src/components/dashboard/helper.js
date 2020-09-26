@@ -82,7 +82,7 @@ export const checkup_list = [
   },
   {
     id: 1,
-    date: '2 JULY s2019',
+    date: '2 JULY 2019',
     status: 'completed',
     author: 'Eliza Shuman',
     img: 'https://source.unsplash.com/6D58t6uZT5M',
