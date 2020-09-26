@@ -3,6 +3,17 @@
 .page-container {
   text-align: center;
   padding-bottom: 100px;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+/* condition for screen size minimum of 500px */
+@media (max-width:1500px) {
+  /* your conditional / responsive CSS inside this condition */
+  .page-container {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
 }
 
 .checkup-container {
@@ -19,7 +30,7 @@
 
 .checkup-item {
   min-width: 300px;
-  width: 30%;
+  width: 300px;
   min-height: 300px;
   max-height: 300px;
   border-radius: 20px;
@@ -60,23 +71,28 @@
 }
 
 .response-item {
-  margin: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.response-item p {
+  margin-top: 5px;
 }
 
 // Styling for response image
-[type=radio] {
+[type=radio], [type=checkbox] {
   position: absolute;
   opacity: 0;
   width: 0;
   height: 0;
 }
-[type=radio] + img {
+[type=radio] + img, [type=checkbox] + img {
   cursor: pointer;
 }
-[type=radio]:checked + img {
+[type=radio]:checked + img, [type=checkbox]:checked + img {
   outline: 2px solid #f00;
 }
-[type=radio]:hover + img {
+[type=radio]:hover + img, [type=checkbox]:hover + img {
   outline: 2px solid blue;
 }
 

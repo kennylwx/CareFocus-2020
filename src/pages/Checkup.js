@@ -10,12 +10,6 @@ import bed from '../images/bed.png';
 
 function Checkup() {
 
-  // load name from tokens?
-  // sessionStorage
-
-  // parameters
-  // const [lastName, setLastName] = useState("");
-
   // additional
   let history = useHistory();
   const uploadedImage = React.useRef(null);
@@ -45,7 +39,7 @@ function Checkup() {
 
   return (
     <div className="page-container">
-      <h1>Bob's Checkup</h1>
+      <h1>Nana Borami's Checkup</h1>
       <form onSubmit={handleSubmit}>
         <div className="checkup-container">
 
@@ -63,114 +57,314 @@ function Checkup() {
 
           <div className="checkup-item">
             <h2>Highlight of the week</h2>
-            <input
-              type="text"
+            <textarea
+              rows="12"
+              cols="25"
+
             />
           </div>
 
           <div className="checkup-item">
             <h2>Activities</h2>
-            <input
-              type="text"
-            />
-          </div>
-
-          <div className="checkup-item">
-            <h2>Eating Well</h2>
             <div className="response-container">
-              <label className="response-item">
-                <input
-                  type="radio"
-                  name="eat"
-                  value="eatingWell"
-                />
-                <img src={bed} alt="Bed Image"/>
-              </label>
-              <label className="response-item">
-                <input
-                  type="radio"
-                  name="eat"
-                  value="eatingPoorly"
-                />
-                <img src={bed} alt="Bed Image"/>
-              </label>
+              <div className="response-item">
+                <label className="response-item">
+                  <input
+                    type="checkbox"
+                    name="activity"
+                    value="stretching"
+                  />
+                  <img src={bed} alt="Bed Image"/>
+                </label>
+                <p>
+                  Stretching
+                </p>
+              </div>
+              <div className="response-item">
+                <label className="response-item">
+                  <input
+                    type="checkbox"
+                    name="activity"
+                    value="walking"
+                  />
+                  <img src={bed} alt="Bed Image"/>
+                </label>
+                <p>
+                  Walking
+                </p>
+              </div>
+              <div className="response-item">
+                <label className="response-item">
+                  <input
+                    type="checkbox"
+                    name="activity"
+                    value="bingo"
+                  />
+                  <img src={bed} alt="Bed Image"/>
+                </label>
+                <p>
+                  Bingo
+                </p>
+              </div>
+              <div className="response-item">
+                <label>
+                  <input
+                    type="checkbox"
+                    name="activity"
+                    value="lawnBowls"
+                  />
+                  <img src={bed} alt="Bed Image"/>
+                </label>
+                <p>
+                  Lawn Bowls
+                </p>
+              </div>
+
             </div>
           </div>
 
+          {/*Diet*/}
           <div className="checkup-item">
-            <h2>Sleeping Well</h2>
+            <h2>Diet</h2>
             <div className="response-container">
-              <label className="response-item">
-                <input
-                  type="radio"
-                  name="sleep"
-                  value="sleepingWell"
-                />
-                <img src={bed} alt="Bed Image"/>
-              </label>
-              <label className="response-item">
-                <input
-                  type="radio"
-                  name="sleep"
-                  value="sleepingPoorly"
-                />
-                <img src={bed} alt="Bed Image"/>
-              </label>
+              <div className="response-item">
+                <label className="response-item">
+                  <input
+                    type="radio"
+                    name="diet"
+                    value="allMeals"
+                  />
+                  <img src={bed} alt="Bed Image"/>
+                </label>
+                <p>
+                  All Meals
+                </p>
+              </div>
+              <div className="response-item">
+                <label className="response-item">
+                  <input
+                    type="radio"
+                    name="diet"
+                    value="someMeals"
+                  />
+                  <img src={bed} alt="Bed Image"/>
+                </label>
+                <p>
+                  Some Meals
+                </p>
+              </div>
+              <div className="response-item">
+                <label className="response-item">
+                  <input
+                    type="radio"
+                    name="diet"
+                    value="noAppetite"
+                  />
+                  <img src={bed} alt="Bed Image"/>
+                </label>
+                <p>
+                  No Appetite
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/*Sleep*/}
+          <div className="checkup-item">
+            <h2>Sleep</h2>
+            <div className="response-container">
+              <div className="response-item">
+                <label className="response-item">
+                  <input
+                    type="radio"
+                    name="sleep"
+                    value="overSleeping"
+                  />
+                  <img src={bed} alt="Bed Image"/>
+                </label>
+                <p>
+                  Over Sleeping
+                </p>
+              </div>
+              <div className="response-item">
+                <label className="response-item">
+                  <input
+                    type="radio"
+                    name="sleep"
+                    value="underSleeping"
+                  />
+                  <img src={bed} alt="Bed Image"/>
+                </label>
+                <p>
+                  Under Sleeping
+                </p>
+              </div>
+              <div className="response-item">
+                <label className="response-item">
+                  <input
+                    type="radio"
+                    name="sleep"
+                    value="regular"
+                  />
+                  <img src={bed} alt="Bed Image"/>
+                </label>
+                <p>
+                  Regular
+                </p>
+              </div>
             </div>
           </div>
 
           {/* Physical Health */}
           <div className="checkup-item">
-            <h2>Physically Health</h2>
+            <h2>Exercise</h2>
 
             <div className="response-container">
-              <label className="response-item">
-                <input
-                  type="radio"
-                  name="physicalHealth"
-                  value="healthy"
-                />
-                <img src={bed} alt="Bed Image"/>
-              </label>
-              <label className="response-item">
-                <input
-                  type="radio"
-                  name="physicalHealth"
-                  value="sick"
-                />
-                <img src={bed} alt="Bed Image"/>
-              </label>
+              <div className="response-item">
+                <label className="response-item">
+                  <input
+                    type="radio"
+                    name="exercise"
+                    value="active"
+                  />
+                  <img src={bed} alt="Bed Image"/>
+                </label>
+                <p>
+                  Active
+                </p>
+              </div>
+              <div className="response-item">
+                <label className="response-item">
+                  <input
+                    type="radio"
+                    name="exercise"
+                    value="moderate"
+                  />
+                  <img src={bed} alt="Bed Image"/>
+                </label>
+                <p>
+                  Moderate
+                </p>
+              </div>
+              <div className="response-item">
+                <label className="response-item">
+                  <input
+                    type="radio"
+                    name="exercise"
+                    value="sedentary"
+                  />
+                  <img src={bed} alt="Bed Image"/>
+                </label>
+                <p>
+                  Sedentary
+                </p>
+              </div>
             </div>
           </div>
 
-          {/* Mood */}
+          {/* Physical Health */}
           <div className="checkup-item">
-            <h2>Mood</h2>
+            <h2>Physical Health</h2>
+
             <div className="response-container">
-              <label className="response-item">
-                <input
-                  type="radio"
-                  name="mood"
-                  value="positive"
-                />
-                <img src={bed} alt="Bed Image"/>
-              </label>
-              <label className="response-item">
-                <input
-                  type="radio"
-                  name="mood"
-                  value="average"
-                />
-                <img src={bed} alt="Bed Image"/>
-              </label>
-              <label className="response-item">
-                <input
-                  type="radio"
-                  name="mood"
-                  value="negative"
-                />
-                <img src={bed} alt="Bed Image"/>
-              </label>
+              <div className="response-item">
+                <label className="response-item">
+                  <input
+                    type="radio"
+                    name="physicalHealth"
+                    value="sore"
+                  />
+                  <img src={bed} alt="Bed Image"/>
+                </label>
+                <p>
+                  Sore
+                </p>
+              </div>
+              <div className="response-item">
+                <label className="response-item">
+                  <input
+                    type="radio"
+                    name="physicalHealth"
+                    value="average"
+                  />
+                  <img src={bed} alt="Bed Image"/>
+                </label>
+                <p>
+                  Average
+                </p>
+              </div>
+              <div className="response-item">
+                <label className="response-item">
+                  <input
+                    type="radio"
+                    name="physicalHealth"
+                    value="healthy"
+                  />
+                  <img src={bed} alt="Bed Image"/>
+                </label>
+                <p>
+                  Healthy
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Mental Health */}
+          <div className="checkup-item">
+            <h2>Mental Health</h2>
+            <div className="response-container">
+              <div className="response-item">
+                <label className="response-item">
+                  <input
+                    type="radio"
+                    name="mentalHealth"
+                    value="social"
+                  />
+                  <img src={bed} alt="Bed Image"/>
+                </label>
+                <p>
+                  Social
+                </p>
+              </div>
+              <div className="response-item">
+                <label className="response-item">
+                  <input
+                    type="radio"
+                    name="mentalHealth"
+                    value="anxious"
+                  />
+                  <img src={bed} alt="Bed Image"/>
+                </label>
+                <p>
+                  Anxious
+                </p>
+              </div>
+              <div className="response-item">
+                <label className="response-item">
+                  <input
+                    type="radio"
+                    name="mentalHealth"
+                    value="depressed"
+                  />
+                  <img src={bed} alt="Bed Image"/>
+                </label>
+                <p>
+                  Depressed
+                </p>
+              </div>
+              <div className="response-item">
+                <label className="response-item">
+                  <input
+                    type="radio"
+                    name="mentalHealth"
+                    value="happy"
+                  />
+                  <img src={bed} alt="Bed Image"/>
+                </label>
+                <p>
+                  Happy
+                </p>
+              </div>
             </div>
           </div>
 
