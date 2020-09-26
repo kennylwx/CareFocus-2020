@@ -9,7 +9,27 @@ import { makeStyles } from '@material-ui/core/styles';
 
 
 // images
-import bed from '../images/bed.png';
+import anxious from '../assets/images/anxious.png';
+import regular from '../assets/images/regular.png';
+import bingo from '../assets/images/bingo.png';
+import sedentary from '../assets/images/sedentary.png';
+import depressed from '../assets/images/depressed.png';
+import moderate from '../assets/images/moderate.png';
+import happy from '../assets/images/happy.png';
+import healthy from '../assets/images/healthy.png';
+import lawnBowls from '../assets/images/lawnBowls.png';
+import sore from '../assets/images/sore.png';
+import someMeals from '../assets/images/someMeals.png';
+import noAppetite from '../assets/images/noAppetite.png';
+import allMeals from '../assets/images/allMeals.png';
+import social from '../assets/images/social.png';
+import average from '../assets/images/average.png';
+import active from '../assets/images/active.png';
+import overSleeping from '../assets/images/overSleeping.png';
+import underSleeping from '../assets/images/underSleeping.png';
+import walking from '../assets/images/walking.png';
+import stretching from '../assets/images/stretching.png';
+import bed from '../assets/images/bed.png';
 
 // for snackbar alert
 function Alert(props) {
@@ -97,7 +117,7 @@ function Checkup() {
                     name="activity"
                     value="stretching"
                   />
-                  <img src={bed} alt="Bed Image"/>
+                  <img src={stretching} alt="stretching"/>
                 </label>
                 <p>
                   Stretching
@@ -110,7 +130,7 @@ function Checkup() {
                     name="activity"
                     value="walking"
                   />
-                  <img src={bed} alt="Bed Image"/>
+                  <img src={walking} alt="walking"/>
                 </label>
                 <p>
                   Walking
@@ -123,7 +143,7 @@ function Checkup() {
                     name="activity"
                     value="bingo"
                   />
-                  <img src={bed} alt="Bed Image"/>
+                  <img src={bingo} alt="bingo"/>
                 </label>
                 <p>
                   Bingo
@@ -136,7 +156,7 @@ function Checkup() {
                     name="activity"
                     value="lawnBowls"
                   />
-                  <img src={bed} alt="Bed Image"/>
+                  <img src={lawnBowls} alt="lawnBowls"/>
                 </label>
                 <p>
                   Lawn Bowls
@@ -157,7 +177,7 @@ function Checkup() {
                     name="diet"
                     value="allMeals"
                   />
-                  <img src={bed} alt="Bed Image"/>
+                  <img src={allMeals} alt="allMeals"/>
                 </label>
                 <p>
                   All Meals
@@ -170,7 +190,7 @@ function Checkup() {
                     name="diet"
                     value="someMeals"
                   />
-                  <img src={bed} alt="Bed Image"/>
+                  <img src={someMeals} alt="someMeals"/>
                 </label>
                 <p>
                   Some Meals
@@ -183,7 +203,7 @@ function Checkup() {
                     name="diet"
                     value="noAppetite"
                   />
-                  <img src={bed} alt="Bed Image"/>
+                  <img src={noAppetite} alt="noAppetite"/>
                 </label>
                 <p>
                   No Appetite
@@ -203,7 +223,7 @@ function Checkup() {
                     name="sleep"
                     value="overSleeping"
                   />
-                  <img src={bed} alt="Bed Image"/>
+                  <img src={overSleeping} alt="overSleeping"/>
                 </label>
                 <p>
                   Over Sleeping
@@ -216,7 +236,7 @@ function Checkup() {
                     name="sleep"
                     value="underSleeping"
                   />
-                  <img src={bed} alt="Bed Image"/>
+                  <img src={underSleeping} alt="underSleeping"/>
                 </label>
                 <p>
                   Under Sleeping
@@ -229,7 +249,7 @@ function Checkup() {
                     name="sleep"
                     value="regular"
                   />
-                  <img src={bed} alt="Bed Image"/>
+                  <img src={regular} alt="regular"/>
                 </label>
                 <p>
                   Regular
@@ -250,7 +270,7 @@ function Checkup() {
                     name="exercise"
                     value="active"
                   />
-                  <img src={bed} alt="Bed Image"/>
+                  <img src={active} alt="active"/>
                 </label>
                 <p>
                   Active
@@ -263,7 +283,7 @@ function Checkup() {
                     name="exercise"
                     value="moderate"
                   />
-                  <img src={bed} alt="Bed Image"/>
+                  <img src={moderate} alt="moderate"/>
                 </label>
                 <p>
                   Moderate
@@ -276,7 +296,7 @@ function Checkup() {
                     name="exercise"
                     value="sedentary"
                   />
-                  <img src={bed} alt="Bed Image"/>
+                  <img src={sedentary} alt="sedentary"/>
                 </label>
                 <p>
                   Sedentary
@@ -297,7 +317,7 @@ function Checkup() {
                     name="physicalHealth"
                     value="sore"
                   />
-                  <img src={bed} alt="Bed Image"/>
+                  <img src={sore} alt="sore"/>
                 </label>
                 <p>
                   Sore
@@ -310,7 +330,7 @@ function Checkup() {
                     name="physicalHealth"
                     value="average"
                   />
-                  <img src={bed} alt="Bed Image"/>
+                  <img src={average} alt="average"/>
                 </label>
                 <p>
                   Average
@@ -323,7 +343,7 @@ function Checkup() {
                     name="physicalHealth"
                     value="healthy"
                   />
-                  <img src={bed} alt="Bed Image"/>
+                  <img src={healthy} alt="healthy"/>
                 </label>
                 <p>
                   Healthy
@@ -343,7 +363,7 @@ function Checkup() {
                     name="mentalHealth"
                     value="social"
                   />
-                  <img src={bed} alt="Bed Image"/>
+                  <img src={social} alt="social"/>
                 </label>
                 <p>
                   Social
@@ -356,7 +376,7 @@ function Checkup() {
                     name="mentalHealth"
                     value="anxious"
                   />
-                  <img src={bed} alt="Bed Image"/>
+                  <img src={anxious} alt="anxious"/>
                 </label>
                 <p>
                   Anxious
@@ -369,7 +389,7 @@ function Checkup() {
                     name="mentalHealth"
                     value="depressed"
                   />
-                  <img src={bed} alt="Bed Image"/>
+                  <img src={depressed} alt="depressed"/>
                 </label>
                 <p>
                   Depressed
@@ -382,7 +402,7 @@ function Checkup() {
                     name="mentalHealth"
                     value="happy"
                   />
-                  <img src={bed} alt="Bed Image"/>
+                  <img src={happy} alt="happy"/>
                 </label>
                 <p>
                   Happy
