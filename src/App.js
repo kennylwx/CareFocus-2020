@@ -1,16 +1,26 @@
 import React from 'react';
 import './styles/app.scss';
 import Header from './components/Header';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Checkup from './pages/Checkup';
+import Dashboard from './pages/Dashboard';
+import HomePage from './pages/HomePage';
+import Login from './pages/Login';
 
 function App() {
   return (
-    <div className="App">
-      This is the app now.
-      {/* <NavLink to="/dashboard">Dashboard</NavLink>
-      <NavLink to="/login">Login</NavLink>
-      <NavLink to="/settings">Settings</NavLink>
-      <NavLink to="/">Settings</NavLink> */}
-    </div>
+    <BrowserRouter>
+    <Switch>
+      {/* General */}
+      <Route path="/checkup" component={Checkup} />
+      <Route path="/dashboard" component={Dashboard} />
+      <Route path="/home" component={HomePage} />
+      <Route path="/login" component={Login} />
+
+      <Route component={Checkup} />
+    </Switch>
+  </BrowserRouter>
+ 
   );
 }
 

@@ -4,7 +4,7 @@ import '../styles/checkup.scss';
 function Checkup() {
   return (
     <div>
-      
+      THis is checkup
     </div>
   );
 }
