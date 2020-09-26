@@ -4,8 +4,7 @@ import '../styles/checkup.scss';
 function Checkup() {
   return (
     <div>
-THIS IS NOT A CHECKUPS
-
+      THIS IS NOT A CHECKUPS
     </div>
   );
 }
