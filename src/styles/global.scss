@@ -2,6 +2,13 @@ $mainGreen: #70AEA6;
 $darkGreen: #32524E;
 
 
+.green {
+  color: #92D1C9;
+}
+
+.dark-green {
+  color: #5B9A93;
+}
 
 @mixin border-radius($radius) {
 	border-radius: $radius;

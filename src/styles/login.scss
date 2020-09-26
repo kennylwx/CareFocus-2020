@@ -1,3 +1,5 @@
+@import 'global.scss';
+
 .button {
   background-color: #74B0A6;
   border: none;
@@ -11,69 +13,133 @@
   margin: 4px 2px;
 }
 
-.header {
-    .logo {
-      width: 128px;
-      height: 64px;
-      object-fit: cover;
-      margin-top: 30px;
-      margin-left: 30px;
+.background {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+
+  svg {
+    width: 560px;
+    height:560px;
+
+    path {
+      fill-opacity: .90;
     }
+
   }
+}
+
+.header {
+  font-size: 1.6em;
+  // background-color: orange;
+  padding: 24px 24px;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+
+  svg {
+    width: 48px;
+    height: 48px;
+    margin-right: 12px;
+  }
+}
 
 .rectangle{
   background-color: #EAF6F5;
   height: 100vh;
   min-height: 720px;
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
 
-  .welcome {
-    margin-top: 200px;
-    margin-bottom: 20px;
-    font-style: normal;
-    text-align: center;
-    font-weight: bold;
-    font-size: 28px;
-    color: #263238;
+
+  .details {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
+    min-width: 320px;
+    margin: 48px auto 0;
+    padding: 36px;
+    @include border-radius(8px);
+    filter: drop-shadow(1px 1px 4px rgba(0,0,0,0.25));
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 3;
+
+    label {
+      margin: 12px 0 12px;
+      color: #5c5c5c;
+      font-size: 0.72em;
+      text-transform: uppercase;
+      margin-top: 16px;
+    }
+
+    input[type=text] {
+      color: #5c5c5c;
+      outline: none;
+      padding: 12px 8px;
+      border: 1px solid #b3b3b3;
+      @include border-radius(4px);
+    }
+
+    input[type=password] {
+      color: #5c5c5c;
+      outline: none;
+      padding: 12px 8px;
+      border: 1px solid #b3b3b3;
+      @include border-radius(4px);
+    }
+
+    .welcome {
+      font-style: normal;
+      text-align: center;
+      font-weight: bold;
+      font-size: 28px;
+      color: #425660;
+      margin: 24px 0 12px;
+    }
+
+    .forget {
+      font-style: normal;
+      font-size: 0.86em;
+      text-align: end;
+      margin-top: 24px;
+      font-weight: 300;
+      color: #787878;
+      background-color: transparent;
+      border: none;
+      text-decoration: underline;
+      cursor: pointer;
+      outline: none;
+    }
+    .forget:hover {
+      color: #1E63C2;
+    }
+
+    .login {
+      margin-top: 12px;
+      padding: 12px 0;
+      cursor: pointer;
+      outline: none;
+      background-color: #74B0A6;
+      border: none;
+      @include border-radius(4px);
+      color: white;
+      font-size: 0.89em;
+      text-transform: uppercase;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .login:active {
+      background-color: #49837a;
+    }
+
   }
 
-  .uname {
-    font-family: Helvetica Neue;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 40px;
-    text-align: center;
-    letter-spacing: 0.624px;
-  }
-
-  .psw {
-    font-family: Helvetica Neue;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 40px;
-    margin-bottom: -10px;
-    text-align: center;
-    letter-spacing: 0.624px;
-  }
-  .forget {
-    font-family: Helvetica Neue;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 40px;
-    text-align: center;
-    letter-spacing: 0.624px;
-  }
-
-  .login {
-    text-align: center;
-  }
 }
 
-body {
-  font-family: Helvetica Neue;
-  margin:0;
-}

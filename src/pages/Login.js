@@ -1,27 +1,29 @@
 import React from 'react';
 import '../styles/login.scss';
+import {ReactComponent as Logo} from '../assets/icons/logo.svg';
+import {ReactComponent as Background} from '../assets/icons/wheelchair.svg';
+import {NavLink} from 'react-router-dom';
+
 
 function Login() {
   return (
     <div className="rectangle">
-      <div class="header">
-        <img src="https://source.unsplash.com/jEK8iLdSaPc/1600x900" alt="Logo" class="logo"/>
+      <div className="background">
+        <Background />
       </div>
-        <div class="welcome">Welcome Back</div>
+      <div className="header">
+        <Logo />
+        <span className="green">Care</span><span className="dark-green">Focus</span>
+      </div>
 
-        <div class="uname">
+        <div className="details">
+          <div class="welcome">Welcome Back</div>
           <label for="uname"><b>Username</b></label>
           <input type="text" placeholder="Enter Username" name="uname" required />
-       </div>
-
-        <div class="psw"><label for="psw"><b>Password</b></label></div>
-        <div class="psw">
+          <label for="psw"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="psw" required/> 
-        </div>
-        <div class="forget"><a href="#">Forgot password?</a></div>
-
-        <div class="login">
-          <button type="button" class="button">Log in</button>
+          <button className="forget">Did you forget your password?</button>
+          <NavLink to="/" className="login">Log in</NavLink>
         </div>
     </div>    
   );

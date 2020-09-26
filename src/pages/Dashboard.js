@@ -108,7 +108,7 @@ function Dashboard() {
         <div className="topButtons">
           <div className="title">
             <Logo />
-            CareFocus
+            <span className="green">Care</span><span className="dark-green">Focus</span>
           </div>
           <NavButton 
             img={<HomeIcon />} 
