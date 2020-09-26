@@ -1,1 +1,154 @@
 @import './global.scss';
+
+body {
+  background-color: #F5F5F5;
+}
+
+.page-container {
+  text-align: center;
+  padding-bottom: 100px;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.page-container h1 {
+  margin-bottom: 0;
+  color: #464646;
+}
+
+
+.MuiAlert-message, .MuiAlert-icon, .MuiSnackbar-root {
+  background-color: #5C9A93;
+  color: white;
+  border-radius: 4px;
+}
+
+/* condition for screen size minimum of 500px */
+@media (max-width:1500px) {
+  /* your conditional / responsive CSS inside this condition */
+  .page-container {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+.checkup-container {
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px 20px;
+  align-items: center;
+  overflow-x: auto;
+  justify-content: center;
+  align-content: center;
+}
+
+.checkup-item {
+  min-width: 300px;
+  width: 300px;
+  min-height: 300px;
+  max-height: 300px;
+  border-radius: 4px;
+  margin: 10px;
+  background-color: white;
+  text-align: center;
+  filter: drop-shadow(0 0 4px rgba(0,0,0,0.15));
+}
+
+.checkup-item h2 {
+  background-color: #5C9A93;
+  color: white;
+  padding: 6px 0;
+  font-weight: 700;
+}
+
+.checkup-item textarea {
+  border: none;
+  filter: drop-shadow(0 0 4px rgba(0,0,0,0.15));
+}
+
+.image-btn {
+  width: 200px;
+  height: 200px;
+  padding: 0;
+  border: none;
+  margin: 0 50px 0;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+  filter: drop-shadow(0 0 4px rgba(0,0,0,0.15));
+}
+
+.image-btn:hover, .checkup-item textarea:hover {
+  border: none;
+  filter: drop-shadow(0 0 4px rgba(0,0,0,0.25));
+}
+
+.image-btn:focus, .checkup-item textarea:focus {
+  outline:none;
+  filter: drop-shadow(0 0 4px rgba(0,0,0,0.25))
+}
+
+.image {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.response-container {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  text-align: center;
+}
+
+.response-item {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.response-item p {
+  margin-top: 5px;
+}
+
+// Styling for response image
+[type=radio], [type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+[type=radio] + img, [type=checkbox] + img {
+  cursor: pointer;
+  border: 5px solid white;
+  border-radius: 4px;
+  filter: drop-shadow(0 0 4px rgba(0,0,0,0.15));
+}
+[type=radio]:checked + img, [type=checkbox]:checked + img {
+  border-color: #de9031;
+}
+[type=radio]:hover + img, [type=checkbox]:hover + img {
+  filter: drop-shadow(0 0 4px rgba(0,0,0,0.25));
+}
+
+.submit-button {
+  padding: 20px 50px 20px 50px;
+  text-align: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  border-radius: 4px;
+  // padding: 8px 22px;
+  background-color: #de9031;
+  color: white;
+  font-size: 0.82em;
+  font-weight: 800;
+  text-transform: uppercase;
+
+}
+
+.submit-button:active {
+  background-color: #f0ac5a;
+}
