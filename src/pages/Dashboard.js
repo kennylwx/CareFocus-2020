@@ -143,7 +143,7 @@ function Dashboard() {
             <Searchbar placeholder={"Search a resident"} />
             <RegularButton nav={"/home"} img={<PlusIcon />} name={"Add Resident"} />
           </div>
-          <MessageBox num={7}/>
+          <MessageBox num={6}/>
           <ResidentList num={6}/>
         </div>
         <div className="bottom-info">
