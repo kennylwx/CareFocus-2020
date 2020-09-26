@@ -1,1 +1,86 @@
 @import './global.scss';
+
+.page-container {
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+.checkup-container {
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px 20px;
+  align-items: center;
+  overflow-x: auto;
+  justify-content: center;
+  align-content: center;
+}
+
+.checkup-item {
+  min-width: 300px;
+  width: 30%;
+  min-height: 300px;
+  max-height: 300px;
+  border-radius: 20px;
+  margin: 10px;
+  background-color: lightcyan;
+  text-align: center;
+}
+
+.image-btn {
+  width: 280px;
+  height: 280px;
+  padding: 0;
+  border: none;
+  margin: 10px;
+  border-radius: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.image-btn:hover {
+  background-color: lightblue;
+  border: none;
+}
+
+.image-btn:focus {
+  outline:none;
+}
+
+.image {
+  border-radius: 20px;
+}
+
+.response-container {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  text-align: center;
+}
+
+.response-item {
+  margin: 20px;
+}
+
+// Styling for response image
+[type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+[type=radio] + img {
+  cursor: pointer;
+}
+[type=radio]:checked + img {
+  outline: 2px solid #f00;
+}
+[type=radio]:hover + img {
+  outline: 2px solid blue;
+}
+
+.submit-button {
+  padding: 20px 50px 20px 50px;
+  text-align: center;
+}
