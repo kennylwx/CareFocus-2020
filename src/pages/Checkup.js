@@ -6,8 +6,6 @@ import { useHistory } from "react-router-dom";
 // images
 import bed from '../images/bed.png';
 
-
-
 function Checkup() {
 
   // additional
@@ -16,8 +14,8 @@ function Checkup() {
   const imageUploader = React.useRef(null);
 
   async function onSubmit() {
-    history.push("")
-    alert("Sent check up to friends and family.")
+    alert("Check up completed. Report will be sent to friends and family.")
+    history.push("/")
   }
 
   function handleSubmit(event) {
@@ -44,12 +42,13 @@ function Checkup() {
         <div className="checkup-container">
 
           <div className="checkup-item">
+            <h2>Photo of the week</h2>
             <input type="file" accept="image/*" onChange={handleImageUpload} ref={imageUploader} style={{display: "none"}}/>
             <button className="image-btn" onClick={() => imageUploader.current.click()}>
               <img className="image"
                 ref={uploadedImage}
                 style={{width: "100%", height: "100%"}}
-                alt="Photo of the week"
+                alt="Add Photo"
                 onError="this.style.display='none'"
               />
             </button>
@@ -68,7 +67,7 @@ function Checkup() {
             <h2>Activities</h2>
             <div className="response-container">
               <div className="response-item">
-                <label className="response-item">
+                <label>
                   <input
                     type="checkbox"
                     name="activity"
@@ -81,7 +80,7 @@ function Checkup() {
                 </p>
               </div>
               <div className="response-item">
-                <label className="response-item">
+                <label>
                   <input
                     type="checkbox"
                     name="activity"
@@ -94,7 +93,7 @@ function Checkup() {
                 </p>
               </div>
               <div className="response-item">
-                <label className="response-item">
+                <label>
                   <input
                     type="checkbox"
                     name="activity"
@@ -128,7 +127,7 @@ function Checkup() {
             <h2>Diet</h2>
             <div className="response-container">
               <div className="response-item">
-                <label className="response-item">
+                <label>
                   <input
                     type="radio"
                     name="diet"
@@ -141,7 +140,7 @@ function Checkup() {
                 </p>
               </div>
               <div className="response-item">
-                <label className="response-item">
+                <label>
                   <input
                     type="radio"
                     name="diet"
@@ -154,7 +153,7 @@ function Checkup() {
                 </p>
               </div>
               <div className="response-item">
-                <label className="response-item">
+                <label>
                   <input
                     type="radio"
                     name="diet"
@@ -174,7 +173,7 @@ function Checkup() {
             <h2>Sleep</h2>
             <div className="response-container">
               <div className="response-item">
-                <label className="response-item">
+                <label>
                   <input
                     type="radio"
                     name="sleep"
@@ -187,7 +186,7 @@ function Checkup() {
                 </p>
               </div>
               <div className="response-item">
-                <label className="response-item">
+                <label>
                   <input
                     type="radio"
                     name="sleep"
@@ -200,7 +199,7 @@ function Checkup() {
                 </p>
               </div>
               <div className="response-item">
-                <label className="response-item">
+                <label>
                   <input
                     type="radio"
                     name="sleep"
@@ -221,7 +220,7 @@ function Checkup() {
 
             <div className="response-container">
               <div className="response-item">
-                <label className="response-item">
+                <label>
                   <input
                     type="radio"
                     name="exercise"
@@ -234,7 +233,7 @@ function Checkup() {
                 </p>
               </div>
               <div className="response-item">
-                <label className="response-item">
+                <label>
                   <input
                     type="radio"
                     name="exercise"
@@ -247,7 +246,7 @@ function Checkup() {
                 </p>
               </div>
               <div className="response-item">
-                <label className="response-item">
+                <label>
                   <input
                     type="radio"
                     name="exercise"
@@ -268,7 +267,7 @@ function Checkup() {
 
             <div className="response-container">
               <div className="response-item">
-                <label className="response-item">
+                <label>
                   <input
                     type="radio"
                     name="physicalHealth"
@@ -281,7 +280,7 @@ function Checkup() {
                 </p>
               </div>
               <div className="response-item">
-                <label className="response-item">
+                <label>
                   <input
                     type="radio"
                     name="physicalHealth"
@@ -294,7 +293,7 @@ function Checkup() {
                 </p>
               </div>
               <div className="response-item">
-                <label className="response-item">
+                <label>
                   <input
                     type="radio"
                     name="physicalHealth"
@@ -314,7 +313,7 @@ function Checkup() {
             <h2>Mental Health</h2>
             <div className="response-container">
               <div className="response-item">
-                <label className="response-item">
+                <label>
                   <input
                     type="radio"
                     name="mentalHealth"
@@ -327,7 +326,7 @@ function Checkup() {
                 </p>
               </div>
               <div className="response-item">
-                <label className="response-item">
+                <label>
                   <input
                     type="radio"
                     name="mentalHealth"
@@ -340,7 +339,7 @@ function Checkup() {
                 </p>
               </div>
               <div className="response-item">
-                <label className="response-item">
+                <label>
                   <input
                     type="radio"
                     name="mentalHealth"
@@ -353,7 +352,7 @@ function Checkup() {
                 </p>
               </div>
               <div className="response-item">
-                <label className="response-item">
+                <label>
                   <input
                     type="radio"
                     name="mentalHealth"
@@ -371,7 +370,7 @@ function Checkup() {
         </div>
 
         {/* Submit Button */}
-        <button className="submit-button">
+        <button className="submit-button" onClick={onSubmit}>
           Submit
         </button>
       </form>
