@@ -1,5 +1,5 @@
 # CareFocus
+Technology to improve communication between caregivers and families in a retirement home setting.
 
-The one stop destination for your care needs.
 Deployed here
 https://agitated-agnesi-e784e6.netlify.app/
